@@ -5,19 +5,19 @@
         "iris.script": "objectscript"
       },
     "objectscript.conn" :{
-        "ns": "IRISAPP",
-        "username": "_SYSTEM",
-        "password": "SYS",
-        "docker-compose": {
-            "service": "iris",
-            "internalPort": 52773
-        },
-        "active": true,
-        "links": {
-            "Kafka Manager TOPICS": "http://${host}:8082/topics",
-            "Production": "http://${host}:${port}/csp/user/EnsPortal.ProductionConfig.zen?PRODUCTION=dc.Demo.Production",
-            "Rule": "http://${host}:${port}/csp/user/EnsPortal.RuleEditor.zen?RULE=dc.Demo.FilterPostsRoutingRule"
-        }
+      "ns": "IRISAPP",
+      "username": "_SYSTEM",
+      "password": "SYS",
+      "docker-compose": {
+        "service": "iris",
+        "internalPort": 52773
+      },
+      "active": true,
+      "links": {
+        "Kafka Manager TOPICS": "http://${host}:8082/topics",
+        "Production": "http://${host}:${port}/csp/user/EnsPortal.ProductionConfig.zen?PRODUCTION=dc.Demo.Production",
+        "Rule": "http://${host}:${port}/csp/user/EnsPortal.RuleEditor.zen?RULE=dc.Demo.FilterPostsRoutingRule"
+      }
     },
     "sqltools.connections": [
       {

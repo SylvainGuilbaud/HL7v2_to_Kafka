@@ -1,0 +1,12 @@
+MSH|^~\&|SendingApp|SendingFac|ReceivingApp|ReceivingFac|20180101120000||SIU^S12|123456789|P|2.3.1
+SCH|123456|12345678|SURG|||20180101123000|60|||123456^Dr. Smith^John|123456^Dr. Jones^Jane|^^^123 Main St^^New York^NY^10001^USA|||||U|12345^General Surgery^Surgery
+PID|||123456789|John^Doe^^^^^L||19800101|M|||||||||||1234567890
+PV1||O|OP||||123456^Dr. Smith^John|||||||||||||||||||||||||||||||||||20180101
+OBX|1|FT|FIND^FINDINGS^XRAY|1|Results of X-Ray: Fractured rib noted on the right side.||||||F
+OBX|2|FT|FIND^FINDINGS^XRAY|2|No evidence of pulmonary abnormalities.||||||F
+OBX|3|FT|FIND^FINDINGS^XRAY|3|Clear visualization of heart and mediastinal structures.||||||F
+OBX|4|FT|FIND^FINDINGS^XRAY|4|Minimal right-sided pleural effusion.||||||F
+OBX|5|FT|FIND^FINDINGS^XRAY|5|Lung fields clear bilaterally.||||||F
+RGS|1|12345678
+AIS|1|12345678|^^^XRAY^X-Ray Dept|||||||N|||20180101123000|20180101124500||123456^Dr. Jones^Jane||||||1234567890
+AIL|1|12345678|^^^XRAY^X-Ray Room 1|123456^Dr. Smith^John||20180101123000|20180101124500|20180101123500|30|||||||||1234567890
