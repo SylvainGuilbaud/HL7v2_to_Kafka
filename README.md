@@ -52,5 +52,8 @@ $ docker-compose up -d
 
 
 ## How to Run the Sample
-Just copy some HL7 messages from /data/HL7/test into /data/HL7/in
+1. copy some HL7 messages from /data/HL7/test into /data/HL7/in
+2. check the [Visual Trace](http://localhost:8888/csp/healthshare/irisapp/EnsPortal.MessageViewer.zen?$NAMESPACE=IRISAPP&$NAMESPACE=IRISAPP&)
+3. see a [full trace](http://localhost:8888/csp/healthshare/irisapp/EnsPortal.VisualTrace.zen?SESSIONID=2)
+4. go to [Kafka Manager](http://localhost:8082/topics) and fetch data from the different topics
 
