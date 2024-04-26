@@ -15,6 +15,11 @@ After an HL7 message has been processed, ie: by copying some messages from [/dat
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace1.jpg?raw=true">
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace2.jpg?raw=true">
 
+## Kafka Manager
+Then, you can check the messages in Kafka, using KafkaManager interface and fetching data from the different topics.
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/KafkaManager1.jpg?raw=true">
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/KafkaManager2.jpg?raw=true">
+
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
