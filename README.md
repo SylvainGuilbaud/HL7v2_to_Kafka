@@ -1,6 +1,5 @@
  [![Gitter](https://img.shields.io/badge/Available%20on-Intersystems%20Open%20Exchange-00b2a9.svg)](https://openexchange.intersystems.com/package/iris-interoperability-template)
 
-
 ## Production Configuration
 
 This demo has an interoperability [production](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/src/HL7v2toKafka/production.cls) with 3 HL7 Business Services one HL7 ROUTER and 3 Business Operations, include one sending the transformed messages to Kakfa.
