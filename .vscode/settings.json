@@ -15,8 +15,8 @@
       "active": true,
       "links": {
         "Kafka Manager TOPICS": "http://${host}:8082/topics",
-        "Production": "http://${host}:${port}/csp/user/EnsPortal.ProductionConfig.zen?PRODUCTION=dc.Demo.Production",
-        "Rule": "http://${host}:${port}/csp/user/EnsPortal.RuleEditor.zen?RULE=dc.Demo.FilterPostsRoutingRule"
+        "Production": "http://${host}:${port}/csp/healthshare/irisapp/EnsPortal.ProductionConfig.zen?PRODUCTION=HL7v2toKafka.production",
+        "Rule": "http://${host}:${port}/ui/interop/rule-editor/index.html?$NAMESPACE=IRISAPP&rule=HL7v2toKafka.HL7router.SIU"
       }
     },
     "sqltools.connections": [

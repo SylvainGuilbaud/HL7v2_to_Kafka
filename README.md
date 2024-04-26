@@ -1,16 +1,13 @@
  [![Gitter](https://img.shields.io/badge/Available%20on-Intersystems%20Open%20Exchange-00b2a9.svg)](https://openexchange.intersystems.com/package/iris-interoperability-template)
  [![production configuration](https://community.objectscriptquality.com/api/project_badges/measure?project=intersystems_iris_community%2Firis-interoperability-template&metric=alert_status)](https://community.objectscriptquality.com/dashboard?id=intersystems_iris_community%2Firis-interoperability-template)
  [![Reliability Rating](https://community.objectscriptquality.com/api/project_badges/measure?project=intersystems_iris_community%2Firis-interoperability-template&metric=reliability_rating)](https://community.objectscriptquality.com/dashboard?id=intersystems_iris_community%2Firis-interoperability-template)
-# iris-interoperability-template
-This is a template of InterSystems IRIS Interoperability solution.
-It contains a simple interoperablity solution which reads data from Reddit, filters it and outputs into file or sends via email.
 
 ## What The Sample Does
 
-This sample has an interoperability [production](https://github.com/intersystems-community/iris-interoperability-template/blob/master/src/dc/Demo/Production.cls) with an inbound [Reddit Adapter](https://github.com/intersystems-community/iris-interoperability-template/blob/master/src/dc/Reddit/InboundAdapter.cls) which is used by a [Business Service](https://github.com/intersystems-community/iris-interoperability-template/blob/master/src/dc/Demo/RedditService.cls) to read data from Reddit.com.
+This demo has an interoperability [production](https://github.com/intersystems-community/iris-interoperability-template/blob/master/src/dc/Demo/Production.cls) with an inbound [Reddit Adapter](https://github.com/intersystems-community/iris-interoperability-template/blob/master/src/dc/Reddit/InboundAdapter.cls) which is used by a [Business Service](https://github.com/intersystems-community/iris-interoperability-template/blob/master/src/dc/Demo/RedditService.cls) to read data from Reddit.com.
 It reads from reddit.com/new/.json every 15 sec.
 You can alter both the URL and frequency in the service's settings.
-<img width="1411" alt="Screenshot 2020-10-29 at 19 33 14" src="https://user-images.githubusercontent.com/2781759/97603605-a6d0af00-1a1d-11eb-99cc-481efadb0ec6.png">
+<img width="1411" alt="Screenshot 2020-10-29 at 19 33 14" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/ProductionConfiguration.jpg">
 
 The production has a business process with a rule, which filters on news that mentions cats and dogs. The business process then sends this data to a business operation which either saves data to a source folder /output/Dog.txt or /output/Cat.txt.
 <img width="864" alt="Screenshot 2020-10-29 at 19 38 58" src="https://user-images.githubusercontent.com/2781759/97606568-fcf32180-1a20-11eb-90de-4257dd2cf552.png">
@@ -22,13 +19,13 @@ Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installi
 
 Open IRIS Namespace with Interoperability Enabled.
 Open Terminal and call:
-USER>zpm "install interoperability-sample"
+USER>zpm "install hl7v2-to-kafka"
 
 ## Installation: Docker
 Clone/git pull the repo into any local directory
 
 ```
-$ git clone https://github.com/intersystems-community/iris-interoperability-template.git
+$ git clone https://github.com/SylvainGuilbaud/hl7v2-to-kafka.git
 ```
 
 Open the terminal in this directory and run:
