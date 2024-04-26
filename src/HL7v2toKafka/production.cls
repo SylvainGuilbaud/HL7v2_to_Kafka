@@ -1,6 +1,12 @@
 Class HL7v2toKafka.production Extends Ens.Production
 {
 
+ClassMethod OnStart(pTimeStarted As %String) As %Status
+{
+  do ##class(%File).CopyDir("/data/HL7/test","/data/HL7/in",1)
+	return $$$OK
+}
+
 XData ProductionDefinition
 {
 <Production Name="kafka.prod" TestingEnabled="true" LogGeneralTraceEvents="true">

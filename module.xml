@@ -16,11 +16,6 @@
          <Arg>HL7v2toKafka.production</Arg>
          <Arg>0</Arg>
       </Invoke>
-       <Invoke Class="%Library.File" Method="CopyDir" >
-         <Arg>/data/HL7/test</Arg>
-         <Arg>/data/HL7/in</Arg>
-         <Arg>1</Arg>
-      </Invoke>
     </Module>
   </Document>
 </Export>
