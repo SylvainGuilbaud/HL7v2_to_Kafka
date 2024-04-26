@@ -10,6 +10,9 @@ This demo has an interoperability [production](https://github.com/SylvainGuilbau
 The production has a business process with is a [HL7 router](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/src/HL7v2toKafka/HL7router/SIU.cls), which transforms and send HL7 message to Kafka. 
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/RuleEditor.jpg?raw=true">
 
+## Visual Trace
+After a HL7 message has been processed, ie: by copying some messages from [/data/HL7/test](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/tree/main/data/HL7/test) into [/data/HL7/in](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/tree/main/data/HL7/in) directory)
+
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
 
