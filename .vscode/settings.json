@@ -1,0 +1,39 @@
+{
+    "files.associations": {
+
+        "Dockerfile*": "dockerfile",
+        "iris.script": "objectscript"
+      },
+    "objectscript.conn" :{
+        "ns": "IRISAPP",
+        "username": "_SYSTEM",
+        "password": "SYS",
+        "docker-compose": {
+            "service": "iris",
+            "internalPort": 52773
+        },
+        "active": true,
+        "links": {
+            "Kafka Manager TOPICS": "http://${host}:8082/topics",
+            "Production": "http://${host}:${port}/csp/user/EnsPortal.ProductionConfig.zen?PRODUCTION=dc.Demo.Production",
+            "Rule": "http://${host}:${port}/csp/user/EnsPortal.RuleEditor.zen?RULE=dc.Demo.FilterPostsRoutingRule"
+        }
+    },
+    "sqltools.connections": [
+      {
+        "namespace": "IRISAPP",
+        "connectionMethod": "Server and Port",
+        "showSystem": false,
+        "previewLimit": 50,
+        "server": "localhost",
+        "port": 8888,
+        "https": false,
+        "askForPassword": false,
+        "driver": "InterSystems IRIS",
+        "name": "IRIS",
+        "username": "_system",
+        "password": "SYS"
+      }
+    ]
+
+}
