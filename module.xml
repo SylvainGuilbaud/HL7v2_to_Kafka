@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="IRIS" version="26">
+  <Document name="hl7-to-kafka.ZPM">
+    <Module>
+      <Name>hl7-to-kafka</Name>
+      <Description>A simple IRIS interoperability application - transform HL7 and send it to Kafka</Description>
+      <Version>0.1</Version>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="HL7v2toKafka.PKG"/>
+      <Resource Name="interop.PKG"/>
+      <Invoke Class="%SYSTEM.OBJ" Method="Delete" >
+         <Arg>IRISAPPPKG.FoundationProduction.cls</Arg>
+      </Invoke>
+      <Invoke Class="Ens.Director" Method="SetAutoStart" >
+         <Arg>HL7v2toKafka.production</Arg>
+         <Arg>0</Arg>
+      </Invoke>
+    </Module>
+  </Document>
+</Export>

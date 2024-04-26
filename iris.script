@@ -1,0 +1,14 @@
+    #; set r=##class(%Net.HttpRequest).%New(),r.Server="pm.community.intersystems.com",r.SSLConfiguration="ISC.FeatureTracker.SSL.Config" d r.Get("/packages/zpm/latest/installer"),$system.OBJ.LoadStream(r.HttpResponse.Data,"c")
+    zpm "install webterminal"
+    zpm "install classexplorer" 
+    zpm "install passwordless"
+
+    zn "%SYS"
+    Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+    zn "IRISAPP"
+
+    zpm "load /home/irisowner/dev/ -dev -v":1:1
+    #; do $system.OBJ.Delete("IRISAPPPKG.FoundationProduction.cls")
+    #; Set tSC = ##class(Ens.Director).SetAutoStart("HL7v2toKafka.production",0)
+    halt
