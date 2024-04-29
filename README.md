@@ -10,6 +10,12 @@ This demo has an interoperability [production](https://github.com/SylvainGuilbau
 The production has a business process with is a [HL7 router](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/src/HL7v2toKafka/HL7router/SIU.cls), which transforms and send HL7 message to Kafka. 
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/RuleEditor.jpg?raw=true">
 
+## Data Transformation
+
+The Data Transformation Builder allows the edition of the definition of a transformation between HL7v2 SIU sources into Kafka Messages.
+[Data Transformation](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/src/HL7v2toKafka/transfo/SIU.cls)
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/Transfo.jpg?raw=true">
+
 ## Visual Trace
 After an HL7 message has been processed, ie: by copying some messages from [/data/HL7/test](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/tree/main/data/HL7/test) into [/data/HL7/in](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/tree/main/data/HL7/in) directory), you can see its Visual Trace
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace1.jpg?raw=true">

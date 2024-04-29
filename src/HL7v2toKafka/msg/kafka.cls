@@ -1,4 +1,4 @@
-Class HL7v2toKafka.msg.kafka Extends (Ens.Request, %External.Messaging.KafkaMessage)
+Class HL7v2toKafka.msg.kafka Extends EnsLib.Kafka.Message
 {
 
 /// Message topic
