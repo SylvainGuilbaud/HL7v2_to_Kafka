@@ -6,6 +6,8 @@
       <Description>A simple IRIS interoperability application - transform HL7v2 SIU and send it to Kafka</Description>
       <Version>1.0.0</Version>
       <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="data.PKG"/>
       <Resource Name="HL7v2toKafka.PKG"/>
       <Resource Name="interop.PKG"/>
       <Resource Name="SQLConnection.GBL"/>
@@ -16,7 +18,6 @@
          <Arg>HL7v2toKafka.production</Arg>
          <Arg>0</Arg>
       </Invoke>
-      <SourcesRoot>src</SourcesRoot>
     </Module>
   </Document>
 </Export>
