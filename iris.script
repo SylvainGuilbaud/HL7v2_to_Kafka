@@ -8,6 +8,5 @@
 
     zn "IRISAPP"
    
-    merge ^%SYS("sql","ODBCCONNECTION") = ^SQLGateway
     zpm "load /home/irisowner/dev/ -dev -v":1:1
     halt
