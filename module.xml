@@ -4,7 +4,7 @@
     <Module>
       <Name>hl7v2-to-kafka</Name>
       <Description>A simple IRIS interoperability application - transform HL7v2 SIU and send it to Kafka</Description>
-      <Version>1.0.0</Version>
+      <Version>2.0.0</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="data.PKG"/>
