@@ -8,7 +8,6 @@ XData RuleDefinition [ XMLNamespace = "http://www.intersystems.com/rule" ]
 {
 <ruleDefinition alias="" context="EnsLib.MsgRouter.RoutingEngine" production="HL7v2toKafka.production">
 <ruleSet name="" effectiveBegin="" effectiveEnd="">
-<send transform="" target=",target IRIS SQL"></send>
 <rule name="TrakCare" disabled="false">
 <constraint name="source" value="source Kafka Consumer TOPIC APT-FROM-TRAKCARE"></constraint>
 <constraint name="msgClass" value="EnsLib.Kafka.Message"></constraint>
