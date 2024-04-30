@@ -55,6 +55,8 @@ Each time a Kafka topic is consumed, it is sent to the Kafka router process whic
 If you look carefully to the messages, you can notice that the message is sent directly to IRIS without being transformed (same message ID).
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace03.jpg?raw=true">
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace04.jpg?raw=true">
+You can see here the message with I/O and the SQL insert result
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace06.jpg?raw=true">
 
 
 ## Default Settings
