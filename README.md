@@ -57,6 +57,11 @@ If you look carefully to the messages, you can notice that the message is sent d
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace04.jpg?raw=true">
 
 
+## Default Settings
+In order to 
+
+
+
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
 
