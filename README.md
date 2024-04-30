@@ -58,6 +58,14 @@ If you look carefully to the messages, you can notice that the message is sent d
 You can see here the message with I/O and the SQL insert result
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace06.jpg?raw=true">
 
+## SQL 
+You can then see the results inside IRIS database through SQL queries.
+* TrakCare table
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/SQL01.jpg?raw=true">
+* Surg table
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/SQL02.jpg?raw=true">
+* And thanks to inheritance, you can also query all the data by querying the root table, here data.kafka
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/SQL03.jpg?raw=true">
 
 ## Default Settings
 In order to simplify the process of copying a production definition from one environment to another, and ensure watertight separation between the parameters of the different environments, it is recommended to set settings outside of the production class, in the system default settings.
