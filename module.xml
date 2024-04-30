@@ -11,16 +11,12 @@
       <Resource Name="HL7v2toKafka.PKG"/>
       <Resource Name="interop.PKG"/>
       <Resource Name="SQLConnection.GBL"/>
-      <Resource Name="DefaultSettings.GBL"/>
       <Invoke Class="%SYSTEM.OBJ" Method="Delete" >
          <Arg>IRISAPPPKG.FoundationProduction.cls</Arg>
       </Invoke>
       <Invoke Class="Ens.Director" Method="SetAutoStart" >
          <Arg>HL7v2toKafka.production</Arg>
          <Arg>0</Arg>
-      </Invoke>
-      <Invoke Class="Ens.Config.DefaultSettings" Method="%Import" >
-         <Arg>DefaultSettings.txt</Arg>
       </Invoke>
     </Module>
   </Document>
