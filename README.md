@@ -68,6 +68,7 @@ You can then see the results inside IRIS database through SQL queries.
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/SQL03.jpg?raw=true">
 
 ## ClassExplorer
+The [Class Explorer](http://localhost:8888/classexplorer/#{%22name%22:%22data.kafka,data.kafka.DxCare,data.kafka.Surg,data.kafka.TrakCare%22,%22type%22:%22arbitrary%22,%22namespace%22:%22IRISAPP%22}) allow you to see the data model of IRIS classes.
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/ClassExplorer.jpg?raw=true">
 
 ## Default Settings
