@@ -8,7 +8,7 @@ XData RuleDefinition [ XMLNamespace = "http://www.intersystems.com/rule" ]
 {
 <ruleDefinition alias="" context="EnsLib.MsgRouter.RoutingEngine" production="HL7v2toKafka.production">
 <ruleSet name="" effectiveBegin="" effectiveEnd="">
-<send transform="" target=",IRIS SQL"></send>
+<send transform="" target=",target IRIS SQL"></send>
 </ruleSet>
 </ruleDefinition>
 }
