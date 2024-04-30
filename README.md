@@ -16,7 +16,7 @@ HTTP and TCP flows will transform HL7 messages in the same way before sending th
 
 ## Business Rule
 
-The production has a business process with is a [HL7 router](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/src/HL7v2toKafka/HL7router/SIU.cls), which transforms and send HL7 message to Kafka. 
+The production has a business process with is a [HL7 router](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/src/HL7v2toKafka/HL7router/SIU.cls), which transforms and sends HL7 message to Kafka. 
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/RuleEditor.jpg?raw=true">
 
 ## Data Transformation
@@ -34,6 +34,24 @@ After an HL7 message has been processed, ie: by copying some messages from [/dat
 Then, you can check the messages in Kafka, using KafkaManager interface and fetching data from the different topics.
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/KafkaManager01.jpg?raw=true">
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/KafkaManager02.jpg?raw=true">
+
+## Production Configuration Kafka Consumer + SQL IRIS
+The second part of this demonstration consists of consuming Kafka messages and route them to IRIS tables through SQL components. 
+* 3 Kafka Business Services consuming 3 Topics of Kafka
+* 1 router 
+* 3 SQL Business Operations inserting data into IRIS database
+<img width="1411" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/ProductionConfigurationKafka.jpg?raw=true">
+
+## Business Rule
+
+The production has a business process with is a [Kafka router](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/src/HL7v2toKafka/rules/Kafka.cls), which sends Kafka messages to IRIS SQL components. 
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/RuleEditorKafka.jpg?raw=true">
+
+## Visual Trace
+Each time a Kafka topic is consumed, it is sent to the Kafka router process which performs content-based routing of Kafka messages, to the appropriate SQL tables into IRIS.
+If you look carefully to the messages, you can notice that the message is sent directly to IRIS without being transformed (same message ID).
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace03.jpg?raw=true">
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace04.jpg?raw=true">
 
 
 ## Prerequisites
