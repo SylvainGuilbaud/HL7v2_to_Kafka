@@ -3,7 +3,7 @@
 ## Production Configuration
 
 This demo has an interoperability [production](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/src/HL7v2toKafka/production.cls) with 3 HL7 Business Services one HL7 ROUTER and 3 Business Operations, include one sending the transformed messages to Kafka.
-<img width="1411" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/ProductionConfiguration.jpg?raw=true">
+<img width="1411" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/ProductionConfigurationAll.jpg?raw=true">
 
 ## Business Rule
 
