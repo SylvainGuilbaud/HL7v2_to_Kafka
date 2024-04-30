@@ -9,7 +9,7 @@ This demo has an interoperability [production](https://github.com/SylvainGuilbau
 The first part of this demonstration consists of sending an HL7 SIU file which will be transmitted to the 2 other HL7 flows (HTTP and TCP), and transformed and transmitted to the Kafka server. 
 HTTP and TCP flows will transform HL7 messages in the same way before sending them to Kafka as well.
 * 3 HL7 Business Services 
-* one HL7 router 
+* 1 HL7 router 
 * 2 HL7 Business Operations
 * one Business Operation sending the transformed messages to Kafka
 <img width="1411" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/ProductionConfigurationHL7.jpg?raw=true">
