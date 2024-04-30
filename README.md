@@ -67,6 +67,9 @@ You can then see the results inside IRIS database through SQL queries.
 * And thanks to inheritance, you can also query all the data by just querying the root table, here data.kafka
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/SQL03.jpg?raw=true">
 
+## ClassExplorer
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/ClassExplorer.jpg?raw=true">
+
 ## Default Settings
 In order to simplify the process of copying a production definition from one environment to another, and ensure watertight separation between the parameters of the different environments, it is recommended to set settings outside of the production class, in the system default settings.
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/SystemDefaultSettings.jpg?raw=true">
