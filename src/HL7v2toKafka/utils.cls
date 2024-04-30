@@ -1,6 +1,14 @@
 Class HL7v2toKafka.utils Extends %RegisteredObject
 {
 
+/// Create SQL Gateway
+ClassMethod createSQLGateway() As %Status
+{
+        Set sc = $$$OK
+        merge ^%SYS("sql","ODBCCONNECTION") = ^SQLGateway
+        Return sc
+}
+
 /// Description
 ClassMethod send() As %Status
 {

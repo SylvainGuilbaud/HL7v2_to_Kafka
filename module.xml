@@ -19,8 +19,7 @@
          <Arg>HL7v2toKafka.production</Arg>
          <Arg>0</Arg>
       </Invoke>
-      <Invoke Class="Ens.Config.DefaultSettings" Method="%Import" >
-         <Arg>./data/DefaultSettings.xml</Arg>
+      <Invoke Class="HL7v2toKafka.utils" Method="createSQLGateway" >
       </Invoke>
     </Module>
   </Document>
