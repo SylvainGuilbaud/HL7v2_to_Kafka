@@ -3,6 +3,7 @@ Class HL7v2toKafka.production Extends Ens.Production
 
 ClassMethod OnStart(pTimeStarted As %String) As %Status
 {
+  do ##class(Ens.Config.DefaultSettings).%Import("/data/DefaultSettings.txt")
   do ##class(%File).CopyDir("/data/HL7/test","/data/HL7/in",1)
   merge ^%SYS("sql","ODBCCONNECTION") = ^SQLGateway
 	return $$$OK
