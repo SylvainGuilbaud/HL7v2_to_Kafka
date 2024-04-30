@@ -35,6 +35,7 @@ You can see here the message with I/O and the HL7 ACK
 ## Kafka Manager
 Then, you can check the messages in Kafka, using KafkaManager interface and fetching data from the different topics.
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/KafkaManager01.jpg?raw=true">
+And the content of one topic : 
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/KafkaManager02.jpg?raw=true">
 
 ## Production Configuration Kafka Consumer + SQL IRIS
