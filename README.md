@@ -87,13 +87,13 @@ Open Terminal and call:
 USER>zpm "install hl7v2-to-kafka"
 
 ## Installation: Docker
-Clone/git pull the repo into any local directory
+1. Clone/git pull the repo into any local directory
 
 ```
 $ git clone https://github.com/SylvainGuilbaud/hl7v2-to-kafka.git
 ```
 
-Open the terminal in this directory and run:
+2. Open the terminal in this directory and run:
 
 ```
 $ docker-compose build
