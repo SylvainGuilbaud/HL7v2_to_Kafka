@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<defaultSettings>
+<item production="*" item="*" class="*" setting="ArchiveIO" value="1"><Deployable>false</Deployable></item>
+<item production="*" item="*" class="*" setting="LogTraceEvents" value="1"><Deployable>false</Deployable></item>
+<item production="*" item="*" class="*" setting="RuleLogging" value="a"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="*" class="*" setting="MessageSchemaCategory" value="2.3.1"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="*" class="EnsLib.Kafka.Service" setting="Servers" value="host.docker.internal:9092"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="*" class="EnsLib.Kafka.Service" setting="TargetConfigNames" value="Kafka router"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="*" class="EnsLib.SQL.Operation.GenericOperation" setting="JGService" value="JDBC Gateway"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="JDBC Gateway" class="*" setting="Address" value="127.0.0.1"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="JDBC Gateway" class="*" setting="Port" value="55555"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="source HL7 SIU FILE" class="*" setting="ArchivePath" value="/data/HL7/archive"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="source HL7 SIU FILE" class="*" setting="FilePath" value="/data/HL7/in"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="source HL7 SIU FILE" class="*" setting="WorkPath" value="/data/HL7/work"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="source HL7 SIU HTTP" class="*" setting="Port" value="19001"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="source HL7 SIU TCP" class="*" setting="Port" value="19000"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="source Kafka Consumer TOPIC APT-FROM-DXPLANNING" class="*" setting="Topic" value="APT-FROM-DXPLANNING-ENVOIE-TO-PTAH--RECEPTION"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="source Kafka Consumer TOPIC APT-FROM-TRAKCARE" class="*" setting="Topic" value="APT-FROM-TRAKCARE-ENVOIE-TO-PTAH--RECEPTION"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="source Kafka Consumer TOPIC SURG" class="*" setting="Topic" value="SURG-FROM-SendingApp-SendingFac-TO-ReceivingApp--ReceivingFac"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="target HL7 SIU HTTP" class="*" setting="HTTPPort" value="19001"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="target HL7 SIU HTTP" class="*" setting="HTTPServer" value="localhost"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="target HL7 SIU TCP" class="*" setting="IPAddress" value="localhost"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="target HL7 SIU TCP" class="*" setting="Port" value="19000"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="target IRIS SQL" class="*" setting="DSN" value="iris"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="target IRIS SQL" class="*" setting="InputParameters" value="*topic,*key,*value"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="target IRIS SQL" class="*" setting="Query" value="insert into data.kafka 
+(topic,key,value) 
+values 
+(?,?,?)"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="target IRIS SQL" class="*" setting="RequestClass" value="EnsLib.Kafka.Message"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="target IRIS SQL" class="*" setting="ResponseClass" value="HL7v2toKafka.msg.iris"><Deployable>false</Deployable></item>
+<item production="HL7v2toKafka.production" item="target Kafka Producer" class="*" setting="Servers" value="localhost:9092"><Deployable>false</Deployable></item>
+</defaultSettings>
