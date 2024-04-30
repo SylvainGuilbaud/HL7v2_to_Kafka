@@ -58,8 +58,8 @@ If you look carefully to the messages, you can notice that the message is sent d
 
 
 ## Default Settings
-In order to 
-
+In order to simplify the process of copying a production definition from one environment to another, and ensure watertight separation between the parameters of the different environments, it is recommended to set settings outside of the production class, in the system default settings.
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/SystemDefaultSettings.jpg?raw=true">
 
 
 ## Prerequisites
