@@ -64,7 +64,7 @@ You can then see the results inside IRIS database through SQL queries.
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/SQL01.jpg?raw=true">
 * Surg table
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/SQL02.jpg?raw=true">
-* And thanks to inheritance, you can also query all the data by querying the root table, here data.kafka
+* And thanks to inheritance, you can also query all the data by just querying the root table, here data.kafka
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/SQL03.jpg?raw=true">
 
 ## Default Settings

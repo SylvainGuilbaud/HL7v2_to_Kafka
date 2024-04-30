@@ -14,6 +14,7 @@
       },
       "active": true,
       "links": {
+        "class explorer": "http://${host}:${port}/classexplorer/#{%22name%22:%22data.kafka,data.kafka.DxCare,data.kafka.Surg,data.kafka.TrakCare%22,%22type%22:%22arbitrary%22,%22level%22:%22%22,%22namespace%22:%22IRISAPP%22}",
         "Kafka Manager TOPICS": "http://${host}:8082/topics",
         "Production": "http://${host}:${port}/csp/healthshare/irisapp/EnsPortal.ProductionConfig.zen?PRODUCTION=HL7v2toKafka.production",
         "Rule": "http://${host}:${port}/ui/interop/rule-editor/index.html?$NAMESPACE=IRISAPP&rule=HL7v2toKafka.HL7router.SIU",
