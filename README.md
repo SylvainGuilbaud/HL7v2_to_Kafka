@@ -29,6 +29,8 @@ The Data Transformation Builder allows the edition of the definition of a transf
 After an HL7 message has been processed, ie: by copying some messages from [/data/HL7/test](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/tree/main/data/HL7/test) into [/data/HL7/in](https://github.com/SylvainGuilbaud/hl7v2-to-kafka/tree/main/data/HL7/in) directory), you can see its Visual Trace
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace01.jpg?raw=true">
 <img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace02.jpg?raw=true">
+You can see here the message with I/O and the HL7 ACK
+<img width="864" src="https://github.com/SylvainGuilbaud/hl7v2-to-kafka/blob/main/images/VisualTrace05.jpg?raw=true">
 
 ## Kafka Manager
 Then, you can check the messages in Kafka, using KafkaManager interface and fetching data from the different topics.
