@@ -1,4 +1,4 @@
-Class HL7v2toKafka.tranfo.SIU Extends Ens.DataTransformDTL [ DependsOn = (EnsLib.HL7.Message, HL7v2toKafka.msg.kafka) ]
+Class HL7v2toKafka.transfo.SIU Extends Ens.DataTransformDTL [ DependsOn = (EnsLib.HL7.Message, HL7v2toKafka.msg.kafka) ]
 {
 
 Parameter IGNOREMISSINGSOURCE = 1;
@@ -19,6 +19,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.{PIDgrp(1).PID:PatientIdentifierList()}' property='target.key' action='set' />
 <assign value='source.{SCH:AppointmentTimingQuantity().startdatetime.timeofanevent}' property='target.value' action='set' />
 <assign value='target.value _ " PATIENT: " _ source.{PIDgrp(1).PID:PatientName(1)}' property='target.value' action='set' />
+<assign value='target.value _ source.{PIDgrp(1).PID:Sex}' property='target.value' action='set' />
 <foreach property='source.{PIDgrp(1).OBX()}' key='k1' >
 <assign value='target.value _ "  "_source.{PIDgrp(1).OBX(k1):ObservationIdentifier}' property='target.value' action='set' />
 <assign value='target.value _ " " _ source.{PIDgrp(1).OBX(k1):ObservationValue()}' property='target.value' action='set' />
