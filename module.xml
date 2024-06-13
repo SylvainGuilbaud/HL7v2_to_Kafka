@@ -12,6 +12,7 @@
       <Resource Name="interop.PKG"/>
       <Resource Name="SQLConnection.GBL"/>
       <Resource Name="DefaultSettings.GBL"/>
+      <Resource Name="LookupTable.GBL"/>
       <Invoke Class="%SYSTEM.OBJ" Method="Delete" >
          <Arg>IRISAPPPKG.FoundationProduction.cls</Arg>
       </Invoke>
