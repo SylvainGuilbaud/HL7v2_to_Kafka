@@ -52,6 +52,23 @@ XData ProductionDefinition
   </Item>
   <Item Name="target IRIS Surg SQL" Category="SQL,Kafka" ClassName="EnsLib.SQL.Operation.GenericOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
   </Item>
+  <Item Name="get gender" Category="transfo + traitements" ClassName="HTTP.operation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
+    <Setting Target="Adapter" Name="HTTPServer">api.genderize.io</Setting>
+    <Setting Target="Adapter" Name="SSLConfig">API</Setting>
+    <Setting Target="Adapter" Name="URL">/</Setting>
+    <Setting Target="Adapter" Name="SSLCheckServerIdentity">0</Setting>
+    <Setting Target="Host" Name="ArchiveIO">1</Setting>
+  </Item>
+  <Item Name="validate" Category="HL7,transfo + traitements" ClassName="HL7v2toKafka.process.validate" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
+  </Item>
+  <Item Name="store gender" Category="SQL,Kafka" ClassName="EnsLib.SQL.Operation.GenericOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
+    <Setting Target="Host" Name="RequestClass">HL7v2toKafka.msg.gender</Setting>
+    <Setting Target="Host" Name="ResponseClass">HL7v2toKafka.msg.iris</Setting>
+  </Item>
+  <Item Name="source HL7 SIU FILE validate" Category="HL7" ClassName="EnsLib.HL7.Service.FileService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
+    <Setting Target="Adapter" Name="FileSpec">*.hl7</Setting>
+    <Setting Target="Host" Name="TargetConfigNames">validate</Setting>
+  </Item>
 </Production>
 }
 

@@ -1,8 +1,6 @@
-Class interop.JSONMessage Extends (Ens.Request, %JSON.Adaptor)
+Class msg.json Extends (Ens.Request, %JSON.Adaptor)
 {
 
-/// This method is called by the Management Portal to determine the content type that will be returned by the <method>%ShowContents</method> method.
-/// The return value is a string containing an HTTP content type.
 Method %GetContentType() As %String
 {
     Quit "text/html"

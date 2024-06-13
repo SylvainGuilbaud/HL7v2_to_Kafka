@@ -1,4 +1,4 @@
-Class HL7v2toKafka.msg.kafka Extends EnsLib.Kafka.Message
+Class HL7v2toKafka.msg.kafka Extends (msg.json, EnsLib.Kafka.Message)
 {
 
 /// Message topic
@@ -11,22 +11,11 @@ Property value As %String(MAXLEN = "");
 /// Optional message value key
 Property key As %String(MAXLEN = 1000);
 
-Method %GetContentType() As %String
-{
-    Quit "text/html"
-}
-
-/// This method is called by the Management Portal to display a message-specific content viewer.<br>
-/// This method displays its content by writing out to the current device.
-/// The content should match the type returned by the <method>%GetContentType</method> method.<br>
 Method %ShowContents(pZenOutput As %Boolean = 0)
 {
-   do ..%JSONExportToString(.jsonExport)
-    set formatter = ##class(%JSON.Formatter).%New()
-    do formatter.FormatToString(jsonExport, .json)
+    do ##super()
     &html<
-        <i style="color:green;">type: #($classname())#  id: #(..%Id())# </i>
-        <pre>#(json)#</pre>
+        <pre>http://localhost:8082/topics</pre>
     >
 }
 

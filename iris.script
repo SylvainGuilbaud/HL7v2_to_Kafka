@@ -6,6 +6,8 @@
     zn "%SYS"
     Do ##class(Security.Users).UnExpireUserPasswords("*")
 
+    do ##class(Security.SSLConfigs).Create("API")
+
     zn "IRISAPP"
    
     zpm "load /home/irisowner/dev/ -dev -v":1:1

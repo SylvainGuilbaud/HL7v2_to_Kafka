@@ -1,4 +1,4 @@
-Class HL7v2toKafka.msg.iris Extends Ens.Response
+Class HL7v2toKafka.msg.iris Extends (msg.json, Ens.Response)
 {
 
 Property NumRowsAffected As %Integer;
