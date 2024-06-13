@@ -9,7 +9,8 @@
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="data.PKG"/>
       <Resource Name="HL7v2toKafka.PKG"/>
-      <Resource Name="interop.PKG"/>
+      <Resource Name="msg.PKG"/>
+      <Resource Name="HTTP.PKG"/>
       <Resource Name="SQLConnection.GBL"/>
       <Resource Name="DefaultSettings.GBL"/>
       <Resource Name="LookupTable.GBL"/>
