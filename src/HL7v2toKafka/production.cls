@@ -4,6 +4,9 @@ Class HL7v2toKafka.production Extends Ens.Production
 ClassMethod OnStart(pTimeStarted As %String) As %Status
 {
   do ##class(%File).CopyDir("/data/HL7/test","/data/HL7/in",1)
+  do ##class(%File).CopyDir("/data/HL7/test","/data/HL7/validate",1)
+  do ##class(Ens.Util.Statistics).EnableStatsForProduction()
+
 	return $$$OK
 }
 
@@ -47,10 +50,13 @@ XData ProductionDefinition
   <Item Name="Ens.ProductionMonitorService" Category="" ClassName="Ens.ProductionMonitorService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
   <Item Name="target IRIS TrakCare SQL" Category="SQL,Kafka" ClassName="EnsLib.SQL.Operation.GenericOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
+    <Setting Target="Adapter" Name="StayConnected">5</Setting>
   </Item>
   <Item Name="target IRIS DxCare SQL" Category="SQL,Kafka" ClassName="EnsLib.SQL.Operation.GenericOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
+    <Setting Target="Adapter" Name="StayConnected">5</Setting>
   </Item>
   <Item Name="target IRIS Surg SQL" Category="SQL,Kafka" ClassName="EnsLib.SQL.Operation.GenericOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
+    <Setting Target="Adapter" Name="StayConnected">5</Setting>
   </Item>
   <Item Name="get gender" Category="transfo + traitements" ClassName="HTTP.operation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
     <Setting Target="Adapter" Name="HTTPServer">api.genderize.io</Setting>
@@ -64,10 +70,13 @@ XData ProductionDefinition
   <Item Name="store gender" Category="SQL,Kafka" ClassName="EnsLib.SQL.Operation.GenericOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
     <Setting Target="Host" Name="RequestClass">HL7v2toKafka.msg.gender</Setting>
     <Setting Target="Host" Name="ResponseClass">HL7v2toKafka.msg.iris</Setting>
+    <Setting Target="Adapter" Name="StayConnected">5</Setting>
   </Item>
   <Item Name="source HL7 SIU FILE validate" Category="HL7" ClassName="EnsLib.HL7.Service.FileService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
     <Setting Target="Adapter" Name="FileSpec">*.hl7</Setting>
     <Setting Target="Host" Name="TargetConfigNames">validate</Setting>
+  </Item>
+  <Item Name="Ens.Activity.Operation.Local" Category="" ClassName="Ens.Activity.Operation.Local" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
 </Production>
 }

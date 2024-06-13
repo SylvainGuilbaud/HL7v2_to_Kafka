@@ -1,6 +1,6 @@
 MSH|^~\&|SendingApp|SendingFac|ReceivingApp|ReceivingFac|20240426134012||SIU^S12|160019|P|2.3.1|||||FRA|8859/1
 SCH||123456^SendingApp||||SURG|||||1^MIN^20^202405221100|||||EJ0000^DOE^Joe||||EJ0000^Dr. Jones^Jane|^^^123 Main St^^New York^NY^10001^USA|||||U|12345^General Surgery^Surgery
-PID|||00556432^^^HospitalA^PI||DOE^Olivia^^^^^D~DOE^Olivia^^^^^L||19850112|F|||^^Bordeaux^^33000||C~C|C||I|||1234567890
+PID|||00556432^^^HospitalA^PI||DOE^Olivia^^^^^D~DOE^Olivia^^^^^L||19850112|M|||^^Bordeaux^^33000||C~C|C||I|||1234567890
 PV1||O|OP||||123456^Dr. Smith^John|||||||||||||||||||||||||||||||||||20180101
 OBX|1|FT|FIND^FINDINGS^XRAY|1|Results of X-Ray: Fractured rib noted on the right side.||||||F
 OBX|2|FT|FIND^FINDINGS^XRAY|2|No evidence of pulmonary abnormalities.||||||F
