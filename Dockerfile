@@ -1,16 +1,6 @@
 ARG IMAGE=intersystemsdc/irishealth-community:latest
 FROM $IMAGE as builder
 
-USER root
-ENV DEBIAN_FRONTEND=noninteractive
-ARG TIMEZONE_AREA="Europe"
-ARG TIMEZONE_CITY="Paris"
-RUN apt-get update \
-    && apt-get install -y tzdata \
-    && ln -fs /usr/share/zoneinfo/${TIMEZONE_AREA}/${TIMEZONE_CITY} /etc/localtime \
-    && dpkg-reconfigure --frontend noninteractive tzdata
-
-USER irisowner
 COPY .iris_init /home/irisowner/.iris_init
 
 WORKDIR /home/irisowner/dev

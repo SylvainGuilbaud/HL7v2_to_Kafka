@@ -75,3 +75,21 @@ services:
     volumes:
       - ./notebook/Notebooks:/Notebooks
     command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password='' --notebook-dir=/Notebooks"
+  iris-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    command: --check-caps false --ISCAgent false
+    hostname: ${IRIS_CONTAINER_NAME}-test
+    container_name: ${IRIS_CONTAINER_NAME}-test
+    ports:
+      - 1972
+      - 18888:52773
+      - 53773
+      - 19000:19000
+      - 19001:19001
+    volumes:
+      - ./:/home/irisowner/dev/
+      - ./data:/data
+      - ./notebook/Notebooks:/Notebooks
