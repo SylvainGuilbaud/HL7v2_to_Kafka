@@ -7,19 +7,22 @@ services:
       dockerfile: Dockerfile
     restart: always
     command: --check-caps false --ISCAgent false
-    hostname: hl7v2-to-Kafka
-    container_name: hl7v2-to-Kafka
+    hostname: ${IRIS_CONTAINER_NAME}
+    container_name: ${IRIS_CONTAINER_NAME}
     ports:
       - 1972
-      - 8888:52773
+      - 18888:52773
       - 53773
       - 19000:19000
       - 19001:19001
     volumes:
       - ./:/home/irisowner/dev/
       - ./data:/data
+      - ./notebook/Notebooks:/Notebooks
   zookeeper:
     image: 'confluentinc/cp-zookeeper:5.3.1-1'
+    # image: arm64v8/zookeeper:latest
+    # image: confluentinc/cp-zookeeper
     hostname: 'zookeeper'
     ports:
       - 2181:2181
@@ -30,6 +33,8 @@ services:
 
   kafka:
     image: 'confluentinc/cp-kafka:5.3.1-1'
+    # image: wurstmeister/kafka:latest
+    # image: confluentinc/cp-kafka
     hostname: 'kafka'
     depends_on:
       - 'zookeeper'
@@ -45,11 +50,14 @@ services:
       - 'KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1'
       - 'KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR=1'
       - 'KAFKA_TRANSACTION_STATE_LOG_MIN_ISR=1'
-#      - 'KAFKA_JMX_OPTS=-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.net.preferIPv4Stack=true -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.rmi.port=9999 -Djava.rmi.server.hostname=ip here'
+      - 'KAFKA_LISTENERS: INSIDE://:9092,OUTSIDE://:9094'
+#     - 'KAFKA_JMX_OPTS=-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.net.preferIPv4Stack=true -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.rmi.port=9999 -Djava.rmi.server.hostname=ip here'
     restart: 'on-failure'
 
   kafka-manager:
     image: 'eduard93/kafka-manager-demo:latest'
+    # image: hlebalbau/kafka-manager:latest
+    # image: gdp123gd/kafka-manager:v2.0.0.2
     hostname: 'kafka-manager'
     depends_on:
       - 'kafka'
@@ -58,3 +66,12 @@ services:
     ports:
       - 8082:8082
     restart: 'on-failure'
+  notebook:
+    build: 
+      context: notebook
+      dockerfile: dockerfile
+    ports:
+      - "28888:8888"
+    volumes:
+      - ./notebook/Notebooks:/Notebooks
+    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password='' --notebook-dir=/Notebooks"

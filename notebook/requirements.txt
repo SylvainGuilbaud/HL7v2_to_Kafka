@@ -1,0 +1,6 @@
+pandas
+sqlalchemy==2.0.30
+sqlalchemy-iris==0.14.0
+irissqlcli
+ipython-sql
+ipython-iris-magic
