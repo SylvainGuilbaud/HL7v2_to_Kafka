@@ -1,7 +1,8 @@
-    #; set r=##class(%Net.HttpRequest).%New(),r.Server="pm.community.intersystems.com",r.SSLConfiguration="ISC.FeatureTracker.SSL.Config" d r.Get("/packages/zpm/latest/installer"),$system.OBJ.LoadStream(r.HttpResponse.Data,"c")
+    set r=##class(%Net.HttpRequest).%New(),r.Server="pm.community.intersystems.com",r.SSLConfiguration="ISC.FeatureTracker.SSL.Config" d r.Get("/packages/zpm/latest/installer"),$system.OBJ.LoadStream(r.HttpResponse.Data,"c")
     zpm "install webterminal"
     zpm "install classexplorer" 
     zpm "install passwordless"
+    zpm "enable -map -globally"
 
     zn "%SYS"
     Do ##class(Security.Users).UnExpireUserPasswords("*")
